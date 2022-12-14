@@ -1,0 +1,9 @@
+SELECT DISTINCT m.nama, d.namaDosen
+FROM tb_kelas kl INNER JOIN tb_matakuliah mk INNER JOIN tb_dosen d INNER JOIN tb_krs k INNER JOIN tb_mhs m INNER JOIN tb_prodi p INNER JOIN tb_ruangan r
+
+ON (kl.idMatakuliah=mk.idMatakuliah)
+AND (k.idKelas=kl.idKelas)
+AND (kl.idDosen=d.idDosen)
+AND (mk.idProdi=p.idProdi)
+AND (r.noRuangan=kl.noRuangan)
+WHERE (mk.namaMatakuliah="basis data")
